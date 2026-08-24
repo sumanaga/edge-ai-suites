@@ -115,7 +115,7 @@ make backend-bootstrap  # prepares ColonDB, trains YOLO11n, exports FP16 OpenVIN
 
 - reads the dataset from `datasets/ColonDB/raw/`
 - extracts the archive if needed
-- converts CVC masks into YOLO bounding-box labels
+- converts dataset masks into YOLO bounding-box labels
 - creates the train/validation/test split
 - downloads the base `yolo11n.pt` weights through Ultralytics
 - trains YOLO11n using the settings in `backend/config/model.yaml`
