@@ -6,23 +6,7 @@ This section shows how to deploy the multimodal sample application with the agen
 
 The agentic workflow is implemented as a **LangGraph framework-based, sequential multi-agent pipeline**. The `apm-agent`, which is the meta-agent, acts as the orchestrator that triggers the workflow when new fusion results arrive and coordinates the execution of specialized agents, each responsible for a distinct stage of reasoning. Each agent consumes the shared execution context together with outputs from previous stages and produces traceable intermediate artifacts and a final maintenance recommendation.
 
-```text
-Vision (DL Streamer Pipeline Server)──┐
-                                      ├─► Fusion Analytics ──► MQTT (Trigger batch request)
-        Time-Series Analytics       ──┘                           │
-                                                                  ▼
-                                                          Agent service FIFO queue
-                                                                  |
-                                                                  | bounded GET /detections
-                                                                  | bounded GET /detections/summary
-                                                                  v
-                                                      Policy -> Analysis -> Ticketing
-                                                                  |
-                                                                  v
-                                                         In-memory run results
-                                                                  │
-                                                            UI (Dashboard)
-```
+![Agentic Workflow Architecture Diagram](../_assets/IEI-Multi-Agentic-Workflow-Arch.drawio.svg)
 
 | Agent | Input | Output |
 | ----- | ----- | ------ |
@@ -165,7 +149,12 @@ Agent reasoning prompts are in `configs/agentic/prompts/weld-quality-monitoring.
 
    - The following pages appear:
      ![Multimodal Weld Defect Detection Agentic Dashboard](../_assets/agentic_dashboard_view.png)
+
+      Results of the multi-agent pipeline appear:
      ![Agentic Results for weld data](../_assets/agentic_results.png)
+
+     The detections dashboard appears:
+     ![Detections Results for weld data](../_assets/agent_detection.png)
 
 ## Stop the Stack
 

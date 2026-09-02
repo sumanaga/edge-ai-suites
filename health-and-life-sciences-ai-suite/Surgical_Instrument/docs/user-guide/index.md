@@ -1,12 +1,12 @@
 # Surgical Instrument Sample App
 
-::::{container} component_header_row
 <!--hide_directive
+::::{container} component_header_row
 <div class="component_card_widget">
-  <a class="icon_github" href="https://github.com/open-edge-platform/edge-ai-suites/tree/main/health-and-life-sciences-ai-suite/Surgical_Instrument">
+  <a class="icon_github" href="https://github.com/open-edge-platform/edge-ai-suites/tree/release-2026.2.0/health-and-life-sciences-ai-suite/Surgical_Instrument">
      GitHub
   </a>
-  <a class="icon_document" href="https://github.com/open-edge-platform/edge-ai-suites/blob/main/health-and-life-sciences-ai-suite/Surgical_Instrument/README.md">
+  <a class="icon_document" href="https://github.com/open-edge-platform/edge-ai-suites/blob/release-2026.2.0/health-and-life-sciences-ai-suite/Surgical_Instrument/README.md">
      Readme
   </a>
 </div>
@@ -16,7 +16,8 @@ hide_directive-->
 > This application is for **reference and evaluation purposes only**. It is
   **not intended for direct use in clinical or diagnostic environments** and is not
   validated for such a purpose.
-::::
+
+<!--hide_directive :::: hide_directive-->
 
 The app demonstrates how Intel hardware acceleration (CPU / Intel Arc iGPU / Intel NPU) may
 be applied through DL Streamer to AI-based real-time polyp detection in a video presenting
